@@ -32,7 +32,7 @@ class InputMove {
 //has method that determines the winning move
 class Strategy {
     constructor (playerMove) {
-        this.playerMove = playerMove;
+        this.playerMove = playerMove.InputMove;
         this.computerMove = ''
     }
     strategizer () {
@@ -56,7 +56,7 @@ playerMove.checkInput();
 
 
 //create the strategy from the player's move
-let compMove = new Strategy(playerMove.InputMove);
+let compMove = new Strategy(playerMove);
 //console.log(compMove);
 let output = compMove.strategizer();
 
