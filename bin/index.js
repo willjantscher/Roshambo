@@ -1,10 +1,16 @@
+#!/usr/bin/env node
+
+//The first line that begins with #! is usually called a “shebang.” This is normally only used on Linux or UNIX operating systems to inform the system what type of script is included in the rest of the text file. 
+
 //run npm i yargs
 // to run
     //node main.js --move=rock
 
+//console.log('start of application')
+
     const yargs = require('yargs/yargs')
     const { hideBin } = require('yargs/helpers');
-const { exit } = require('yargs');
+    //const { exit } = require('yargs');
     const argv = yargs(hideBin(process.argv)).argv
 
 //argv.move will hold the player input move (rock, paper, or scissors) if passed in like node main.js --move=rock
@@ -27,7 +33,7 @@ class InputMove {
     }
 }
 
-//Class for stretegy
+//Class for strategy
 //takes in player move, and has its own move
 //has method that determines the winning move
 class Strategy {
@@ -79,7 +85,31 @@ if(process.argv.length < 3){  //Expected third argument is the player move
 
 }
 
+//using z shell, don't have paths set?
+//setup the environment
+//bash has different files profile,history,rc... these run the environment... need to set the path for my bins
+//profiles, omyzshell (get this), run through that, read more documentation
 
+//read different books
+//sort by category
+//book (Git)
+//books on command line (all unix cmds work in linux)
+//best book(the linux command line - william e shotts)
+//Pythod Crash Course
+//lots of work may be re-factoring (update old code)
+//book (Refactoring Improving the design of existing code)------------------
+//          Clean Code-----------------------------           
+    //working effectively with legacy code
 
+//ES6 and Beyond ---------------- book for javascript
+    //also, Stoyan Stefanov - Object Oriented JavaScript            ---Javascript: the .... David Flanagan
+
+    //books = organic in-context method for learning
+        //do the examples
+//commit to reading over time
+//commit to x hours a day, always.... 
+
+//program =-==== Notion
+    //
 
 

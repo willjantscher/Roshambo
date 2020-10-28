@@ -1,0 +1,18 @@
+{
+  "name": "roshambo-copy",
+  "version": "1.0.0",
+  "description": "rock paper scissors",
+  "main": "bin/index.js",
+  "bin": {
+    "roshambo": "./bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willjantscher/Roshambo.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
