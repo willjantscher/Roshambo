@@ -6,6 +6,10 @@
 // to run
     //node main.js --move=rock
 
+    //run npm install -g to install this globally
+    //then type roshambo --move=rock into a command terminal to execute
+    
+
 //console.log('start of application')
 
     const yargs = require('yargs/yargs')
