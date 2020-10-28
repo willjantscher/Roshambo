@@ -32,19 +32,23 @@ class InputMove {
 //has method that determines the winning move
 class Strategy {
     constructor (playerMove) {
-        this.playerMove = playerMove.InputMove;
+        this.playerMove = playerMove;   //contains the entire class instance
+        this.playerMoveInput = playerMove.InputMove;    //contains just the players move
         this.computerMove = ''
     }
     strategizer () {
-        if (this.playerMove === 'rock') {
+        if (this.playerMoveInput === 'rock') {
             return this.computerMove = 'paper';
-        } else if (this.playerMove === 'paper') {
+        } else if (this.playerMoveInput === 'paper') {
             return this.computerMove = 'scissors';
-        } else if (this.playerMove === 'scissors') {
+        } else if (this.playerMoveInput === 'scissors') {
             return this.computerMove = 'rock';
         } else {
             return "uh oh something went wrong";
         }
+    }
+    inputChecker () { //take in the playerMove class instance
+        this.playerMove.checkInput();    //run the checkInput function (method of InputMove Class)
     }
 }
 
@@ -52,11 +56,16 @@ class Strategy {
 let playerMove = new InputMove(argv.move);
 
 //check to make sure that the player's move was valid and set this.validInput to true if valid
-playerMove.checkInput();
+//playerMove.checkInput();
 
 
 //create the strategy from the player's move
 let compMove = new Strategy(playerMove);
+
+//Inception/Dependancy Injection here yay
+//check the input from the strategy which calls the checkInput method for the InputMove class
+compMove.inputChecker()
+
 //console.log(compMove);
 let output = compMove.strategizer();
 
